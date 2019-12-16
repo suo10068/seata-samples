@@ -28,11 +28,10 @@ seata-server为release版本0.8.0，demo采用本地单机部署，从此处下�
 
 **注意这里有一个坑，serverAddr不能带‘http://’前缀**
 
-~~~java
+```
 registry {
-  # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
+  # file、nacos、eureka、redis、zk、consul、etcd3、sofa
   type = "nacos"
-
   nacos {
     serverAddr = "192.168.21.89"
     namespace = ""
@@ -40,7 +39,7 @@ registry {
   }
 }
 config {
-  # file、nacos 、apollo、zk、consul、etcd3
+  # file、nacos、apollo、zk、consul、etcd3
   type = "nacos"
   nacos {
     serverAddr = "192.168.21.89"
@@ -49,7 +48,7 @@ config {
   }
 }
 
-~~~
+```
 
 #### 1.2.2 修改conf/nacos-config.txt 配置
 
@@ -57,18 +56,17 @@ service.vgroup_mapping.${your-service-gruop}=default，中间的${your-service-g
 
 demo中有两个服务，分别是storage-service和order-service，所以配置如下
 
-~~~properties
+```properties
 service.vgroup_mapping.storage-service-group=default
 service.vgroup_mapping.order-service-group=default
-~~~
-
+```
 
 
 #### 1.3 启动seata-server
 
-**分两步，如下**
+**分两步，如下**````
 
-~~~shell
+```shell
 # 初始化seata 的nacos配置
 cd conf
 sh nacos-config.sh 192.168.21.89
@@ -76,7 +74,7 @@ sh nacos-config.sh 192.168.21.89
 # 启动seata-server
 cd bin
 sh seata-server.sh -p 8091 -m file
-~~~
+```
 
 ----------
 

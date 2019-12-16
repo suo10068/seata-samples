@@ -1,33 +1,26 @@
 # springcloud-eureka-feign-mybatis-seata
-### 概览
-##### 1.整合seata的demo,此demo都配置好了，拉下来按照步骤，直接可以跑起来观察效果。
 
-##### 2.自己项目整合Seata，主要步骤如下：
-- 1.[下载seata-server](https://github.com/seata/seata/releases),修改server配置
-- 2.client端（你自己的项目），引入配置文件，修改配置文件(注意不要遗漏，可参考下方几个关键步骤)
-- 3.数据源代理设置
-- 4.创建数据库表
-- 5.启动注册中心，启动server,启动client
+## 概览
+1. 整合seata的demo,此demo都配置好了，拉下来按照步骤，直接可以跑起来观察效果。
+2. 自己项目整合Seata，主要步骤如下：
+    - 1.[下载seata-server](https://github.com/seata/seata/releases),修改server配置
+    - 2.client端（你自己的项目），引入配置文件，修改配置文件(注意不要遗漏，可参考下方几个关键步骤)
+    - 3.数据源代理设置
+    - 4.创建数据库表
+    - 5.启动注册中心，启动server,启动client
 
 ##### 关于调用成环和seata-server HA，见最后部分
 
-### 1.此demo技术选型及版本信息
+## 1.此demo技术选型及版本信息
 
-注册中心：eureka
-
-服务间调用：feign
-
-持久层：mybatis 
-
-数据库：mysql 5.7.20
-
-Springboot:2.1.7.RELEASE
-
-Springcloud:Greenwich.SR2
-
-jdk:1.8 
-
-seata:0.8
+* 注册中心：eureka
+* 服务间调用：feign
+* 持久层：mybatis 
+* 数据库：mysql 5.7.20
+* SpringBoot:2.1.7.RELEASE
+* SpringCloud:Greenwich.SR2
+* JDK:1.8 
+* Seata:0.8
 
 使用不同组件，配置情况不同，可参考其他sample；
 
